@@ -138,4 +138,11 @@ def generate_launch_description():
             name='static_right_camera_to_camera',
             arguments=['0', '-0.04', '0.029', '-1.5707', '0', '-1.5707', 'camera_link', 'camera_right']
         ),
+        # Camera link static transform
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='static_right_camera_to_camera',
+            arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'camera_link']
+        )
     ])
